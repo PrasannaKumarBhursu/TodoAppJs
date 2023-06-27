@@ -13,7 +13,7 @@ function renderTodoItem(todo) {
 
 // Function to fetch all todos and render them
 function getTodos() {
-  fetch("http://localhost:3015/todos")
+  fetch("/todos")
     .then((response) => response.json())
     .then((todos) => {
       const todoList = document.getElementById("todoList");
@@ -44,7 +44,7 @@ function addTodo() {
     description: descriptionInput.value,
   };
 
-  fetch("http://localhost:3015/todos", {
+  fetch("/todos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -65,7 +65,7 @@ function addTodo() {
 
 // Function to delete a todo
 function deleteTodoItem(id) {
-  fetch(`http://localhost:3015/todos/${id}`, {
+  fetch(`/todos/${id}`, {
     method: "DELETE",
   })
     .then(() => {
@@ -91,7 +91,7 @@ function updateTodoItem(id) {
 
     console.log(id);
 
-    fetch(`http://localhost:3015/todos/${id}`, {
+    fetch(`/todos/${id}`, {
       method: "PUT",
       body: JSON.stringify(updatedTodo),
       headers: {
