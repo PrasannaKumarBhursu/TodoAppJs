@@ -1,0 +1,110 @@
+/* CSS for the Todo App */
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Form styles */
+#todoForm {
+  display: flex;
+  flex-direction: column; /* Updated: Set flex-direction to column */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#todoForm input[type="text"],
+#todoForm textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Updated: Add margin-bottom */
+  width: 100%; /* Updated: Set width to 100% */
+}
+
+#todoForm button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Todo List styles */
+#todoList {
+  list-style: none;
+  padding: 0;
+}
+
+#todoList li {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+#todoList h3 {
+  color: #333;
+  margin-top: 0;
+}
+
+#todoList p {
+  color: #777;
+}
+
+#todoList .update-button,
+#todoList .delete-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#todoList .delete-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+#todoList .update-button {
+  background-color: #1659c5;
+  color: #fff;
+}
+
+#todoList .delete-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.outer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.inner-container {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .inner-container {
+    width: 50%;
+  }
+}
